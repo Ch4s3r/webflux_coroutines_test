@@ -8,3 +8,13 @@ Error states: `this@HelloController is not captured`
 One workaround is to create a `coroutineScope` around endpoint.
 Not sure why this is working at all and have not tested any performance impacts on this.
 Searching for a proper way to be able to debug suspended endpoints in intellij with webflux and coroutines.
+
+# Quickstart
+
+- Set breakpoints
+  in [HelloController.kt](src%2Fmain%2Fkotlin%2Fcom%2Fexample%2Fwebflux_coroutines_test%2FHelloController.kt)
+- Execute tests
+  for [HelloControllerTest.kt](src%2Ftest%2Fkotlin%2Fcom%2Fexample%2Fwebflux_coroutines_test%2FHelloControllerTest.kt)
+- Evaluate both methods via intellij
+    - the one wrapped in a `coroutineContext` is working
+    - other one is throwing an error
