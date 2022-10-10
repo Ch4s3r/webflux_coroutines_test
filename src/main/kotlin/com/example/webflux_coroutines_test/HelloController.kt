@@ -11,10 +11,10 @@ class HelloController(
 
     @GetMapping("hello")
     suspend fun hello() =
-        helloService.hello() // Set breakpoint here, Option-click on `hello()`
+        helloService.hello() // Throws error when evaluated
 
     @GetMapping("helloCoroutine")
     suspend fun helloCoroutine() = coroutineScope {
-        helloService.hello() // Set breakpoint here, Option-click on `hello()`
+        helloService.hello() // Works just fine when evaluated
     }
 }
